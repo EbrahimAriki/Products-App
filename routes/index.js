@@ -26,7 +26,37 @@
 
   var express = require('express');
 var router = express.Router();
+const fetch = (...args) =>
+	import('node-fetch').then(({default: fetch}) => fetch(...args));
+  const url = `https://fakestoreapi.com/products`;
 
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'famous-quotes4.p.rapidapi.com',
+      'X-RapidAPI-Key': 'your-rapidapi-key'
+    }
+  };
+  // promise syntax
+fetch(url, options)
+.then(res => res.json())
+.then(json => console.log(json))
+.catch(err => console.error('error:' + err))
+
+
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Amazing US Cities',
+
+ 
+//   // fetch(url, options)
+// // .then(res => res.json())
+// // .then(json => console.log(json))
+// // .catch(err => console.error('error:' + err))
+// //  data5: JSON.stringify(json) })
+//   });
+//   });
+
+  
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -275,6 +305,7 @@ router.get('/', function(req, res, next) {
       }
       ]
     });
+
 //       /* GET home page. */
 // router.get('/', function(req, res, next) {
 //   res.render(
