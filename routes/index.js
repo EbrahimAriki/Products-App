@@ -275,19 +275,33 @@ router.get('/', function(req, res, next) {
       }
       ]
     });
-      /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render(
+//       /* GET home page. */
+// router.get('/', function(req, res, next) {
+//   res.render(
     
-     fetch('https://fakestoreapi.com/products')
-    .then(res => res.json())
-    .then((data5) => setProducts(data5)) 
+//      fetch('https://fakestoreapi.com/products')
+//     // .then(res => res.json())
+
+//     .then((data5) => setProducts(data5)) 
+  
     
     
     
-    , {
-    title: 'Amazing US Cities'})
-  });
+//     , {
+//     title: 'Amazing US Cities'})
+//   });
+// const fetch = (...args) =>
+// 	import('node-fetch').then(({default: fetch}) => fetch(...args));
+// router.get(`/`, async function (req, res) {
+// 	const url =
+// 		'https://famous-quotes4.p.rapidapi.com/random?category=all&count=2';
+// 	const options = {
+// 		method: 'GET',
+// 		headers: {
+// 			'X-RapidAPI-Host': 'famous-quotes4.p.rapidapi.com',
+// 			'X-RapidAPI-Key': 'your-rapidapi-key'
+// 		}
+// 	};
 
 
 });
